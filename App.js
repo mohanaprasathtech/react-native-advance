@@ -15,13 +15,12 @@ const App = () => {
     // <Fetch />
 
     //REDUX PART
-    // <View style={{flex: 1}}>
-    //   <StoreProvider store={store}>
-    //     <Counter />
-    //   </StoreProvider>
-    // </View>
+    <View style={{flex: 1}}>
+      <StoreProvider store={store}>
+        <Counter />
+      </StoreProvider>
+    </View>
 
-    
     //SCREEN NAVIGATION PART
     // <NavigationContainer>
     //   <Stack.Navigator>
