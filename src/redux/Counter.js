@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, Button} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
-import {addition, subtraction,nulls} from './action';
+import {addition, subtraction, nulls} from './action';
 function Counter() {
   const data = useSelector(state => state.counter);
   const dispatch = useDispatch();

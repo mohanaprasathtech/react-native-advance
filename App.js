@@ -8,18 +8,20 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Firstpage from './src/navigation/Firstpage';
 import Secondpage from './src/navigation/Secondpage';
+import Images from './src/img-crop/Image';
 const Stack = createNativeStackNavigator();
 const App = () => {
+  const [image, setImage] = useState(null);
   return (
     //API FETCHING
     // <Fetch />
 
     //REDUX PART
-    <View style={{flex: 1}}>
-      <StoreProvider store={store}>
-        <Counter />
-      </StoreProvider>
-    </View>
+    // <View style={{flex: 1}}>
+    //   <StoreProvider store={store}>
+    //     <Counter />
+    //   </StoreProvider>
+    // </View>
 
     //SCREEN NAVIGATION PART
     // <NavigationContainer>
@@ -36,6 +38,9 @@ const App = () => {
     //     />
     //   </Stack.Navigator>
     // </NavigationContainer>
+
+    //IMAGE CROPPER
+    <Images image={image} setImage={setImage} />
   );
 };
 export default App;
