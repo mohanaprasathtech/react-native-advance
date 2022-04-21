@@ -1,13 +1,17 @@
-import React from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import React, {useState} from 'react';
+import {View, Text, StyleSheet, Image, Button} from 'react-native';
 function Blur() {
+  const [blur, setblur] = useState(0);
   return (
     <View>
       <Image
+        style={{marginTop: 50}}
         resizeMode="cover"
         source={require('../img-crop/pic.jpg')}
-        blurRadius={10}
+        blurRadius={blur}
       />
+      <Button title="+" onPress={() => setblur(blur + 5)} />
+      <Button title="-" onPress={() => setblur(blur - 5)} />
     </View>
   );
 }
