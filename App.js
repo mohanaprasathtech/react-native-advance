@@ -9,6 +9,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Firstpage from './src/navigation/Firstpage';
 import Secondpage from './src/navigation/Secondpage';
 import Images from './src/img-crop/Image';
+import Blur from './src/img-blur/Blur';
 const Stack = createNativeStackNavigator();
 const App = () => {
   const [image, setImage] = useState(null);
@@ -40,7 +41,10 @@ const App = () => {
     // </NavigationContainer>
 
     //IMAGE CROPPER
-    <Images image={image} setImage={setImage} />
+    // <Images image={image} setImage={setImage} />
+
+    //IMG-BLUR
+    <Blur />
   );
 };
 export default App;
